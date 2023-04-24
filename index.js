@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
     // http://localhost:4000/
     res.send('Hello JS!');
 });
+
+app.get("hi",sayHi());
+
 app.get('/hello/:nom/:prenom',(req,res) => {
 res.send(`Hello ${req.params.nom} ${req.params.prenom}!`);
 });
@@ -24,6 +27,8 @@ app.put('/update',(req,res) => {
     console.log(req.body);
     res.send(req.body);
 })
+
+
 app.listen(port, () => {
     console.log(`Server started on port: ${port}`);
 });
